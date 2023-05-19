@@ -26,6 +26,25 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+
+                      <ul class="navbar-nav" style=" float:right; !important">
+                        @if (Context.Session.GetString("FullName") != null)
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link text-light">Hello @Context.Session.GetString("Username")</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  asp-area=" " asp-controller="Home" asp-action="Logout">Log Out</a>
+                            </li> 
+                            
+                        }
+                        else
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Log In</a>
+                            </li>
+                        }
+                      </ul>
                 </div>
             </div>
         </nav>
