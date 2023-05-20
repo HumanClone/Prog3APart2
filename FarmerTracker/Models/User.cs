@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Permissions;
 
-
 #nullable disable
 
 namespace FarmerTracker.Models
@@ -30,8 +29,8 @@ namespace FarmerTracker.Models
         public string PhoneNumber { get; set; }
 
 
-        public bool? Farmer { get; set; }
-
+        public string Farmer { get; set; }
+        
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string UserPassword { get; set; }

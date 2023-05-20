@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/FarmerTracker/bin/Debug/net7.0/FarmerTracker.dll",
+            "program": "${workspaceFolder}/FarmerTracker/bin/Debug/net6.0/FarmerTracker.dll",
             "args": [],
             "cwd": "${workspaceFolder}/FarmerTracker",
             "stopAtEntry": false,

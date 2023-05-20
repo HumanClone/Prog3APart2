@@ -15,6 +15,11 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        #warning neeed to remove on release
+        HttpContext.Session.SetInt32("UserId",2);
+        HttpContext.Session.SetString("FullName","Abby");
+        //HttpContext.Session.SetString("Farmer","Yes");
+        
         return View();
     }
 
@@ -32,6 +37,15 @@ public class HomeController : Controller
     {
         HttpContext.Session.Clear();
         return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult Profile()
+    {
+        return RedirectToAction("Profile", "Farmers");
+    }
+    public IActionResult Home()
+    {
+        return RedirectToAction("Home", "Employees");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

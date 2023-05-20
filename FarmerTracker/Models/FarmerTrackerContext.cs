@@ -24,14 +24,8 @@ namespace FarmerTracker.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // var config = new ConfigurationBuilder().
-                //             SetBasePath(Directory.GetCurrentDirectory()).
-                //             AddJsonFile("appsettings.json").
-                //             Build();
 
-                // optionsBuilder.UseSqlServer(config.GetConnectionString("FarmerDatabase"));
-
-                optionsBuilder.UseSqlServer("Data Source=lab000000\\SQLEXPRESS;Initial Catalog=FarmerTracker;Integrated Security=True Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+                optionsBuilder.UseSqlServer("Data Source=lab000000\\SQLEXPRESS;Initial Catalog=FarmerTracker;Integrated Security=True; Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
             }
         }
 
@@ -52,13 +46,17 @@ namespace FarmerTracker.Models
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Products__UserId__4D94879B");
+                    .HasConstraintName("FK__Products__UserId__68487DD7");
             });
 
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property(e => e.Email)
                     .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Farmer)
+                    .HasMaxLength(3)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FullName)

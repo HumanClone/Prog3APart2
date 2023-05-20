@@ -10,7 +10,6 @@
 </p> *@
 <p>
     <a asp-action="Create" class="btn btn-primary">Add New User</a>
-    count:@Context.Session.GetString("Users")
 </p>
 <table class="table">
     <thead>
@@ -37,13 +36,13 @@
         </tr>
     </thead>
     <tbody>
-@* 
+
 @foreach (var item in Model) {
         <tr class="table-info">
             <td>
                 @Html.DisplayFor(modelItem => item.UserId)
             </td>
-            @* <td>
+             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
             <td>
@@ -55,9 +54,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Farmer)
             </td> 
-            
         </tr>
-} *@
+} 
     </tbody>
 </table>
 

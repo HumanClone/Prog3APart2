@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-@model FarmerTracker.Models.User
+
 <html lang="en">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <head>
@@ -21,19 +21,39 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (Context.Session.GetString("FullName") != null)
+                        {
+                            if(Context.Session.GetString("Farmer")!=null)
+                            {
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Farmers" asp-action="Profile">Home</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="Home">Home</a>
+                                </li>
+                            }
+                        }
+                        
+                        else    
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                        }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        
                     </ul>
 
                       <ul class="navbar-nav" style=" float:right; !important">
                         @if (Context.Session.GetString("FullName") != null)
                         {
                             <li class="nav-item active">
-                                <a class="nav-link text-light">Hello @Context.Session.GetString("FullName")</a>
+                                <a class="nav-link text-dark"> Hello @Context.Session.GetString("FullName")</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"  asp-area=" " asp-controller="Home" asp-action="Logout">Log Out</a>
@@ -45,6 +65,7 @@
                             @* <li class="nav-item ">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Log In</a>
                             </li> *@
+                            
                             <li class="nav-item">
                                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Login">Login</button>
                             </li>
@@ -79,7 +100,7 @@
                             <label class="text-danger">@ViewBag.Notification</label>
                         </div>
                     </div>
-                    <div class="form-group">
+                    @* <div class="form-group">
                         <div class="form-floating mb-3">
                             <input asp-for="FullName" class="form-control" placeholder="FullName" />
                             <label asp-for="FullName"></label>
@@ -92,7 +113,7 @@
                             <input asp-for="UserPassword" class="form-control" placeholder="UserPassword" />
                             <label asp-for="UserPassword"></label>
                         </div>
-                    </div>
+                    </div> *@
 
                     <div class="form-group">
                         <input type="submit" value="Login" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal" />
