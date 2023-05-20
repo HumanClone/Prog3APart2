@@ -1,0 +1,51 @@
+@model IEnumerable<FarmerTracker.Models.Product>
+@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Product</a>
+</p>
+
+<h2>Welcome @Context.Session.GetString("FullName")</h2>
+
+
+<table class="table">
+    <thead>
+        <tr class="table-secondary">
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ptype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pdate)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+        <tr class="table-info">
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Pname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ptype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pdate)
+            </td>
+        </tr>
+} 
+    </tbody>
+</table

@@ -1,0 +1,70 @@
+@model FarmerTracker.Models.Product
+
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" href="~/Study.styles.css" asp-append-version="true" />
+<script>
+    $(document).ready(function () {
+        $("#newUser").modal('show');
+    });
+</script>
+
+<div class="modal fade" id="newUser" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Add New User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" asp-area="" asp-controller="Employees" asp-action=""></button>
+            </div>
+
+            <div class="modal-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Pname" class="form-control" />
+                                <label asp-for="Pname" ></label>
+                                <span asp-validation-for="Pname" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <select asp-for="Ptype" class="form-select">
+                                    <option selected>Select Product Type</option>
+                                    <option value="Fruit">Fruit</option>
+                                    <option value="Vegetable">Vegetable</option>
+                                    <option value="Grain">Grain</option>
+                                    <option value="Dairy">Dairy</option>
+                                    <option value="Meat">Meat</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <label asp-for="Ptype" ></label>
+                                <span asp-validation-for="Ptype" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Pdate" class="form-control" />
+                                <label asp-for="Pdate" ></label>
+                                <span asp-validation-for="Pdate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

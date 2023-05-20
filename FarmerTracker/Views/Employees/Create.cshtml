@@ -1,0 +1,80 @@
+@model FarmerTracker.Models.User
+
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" href="~/Study.styles.css" asp-append-version="true" />
+<script>
+    $(document).ready(function () {
+        $("#newUser").modal('show');
+    });
+</script>
+
+<div class="modal fade" id="newUser" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Add New User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" asp-area="" asp-controller="Employees" asp-action=""></button>
+            </div>
+
+            <div class="modal-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="FullName" class="form-control" />
+                                <label asp-for="FullName" ></label>
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Email" class="form-control" />
+                                <label asp-for="Email" ></label>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                <label asp-for="PhoneNumber" ></label>
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="UserPassword" class="form-control" />
+                                <label asp-for="UserPassword" ></label>
+                                <span asp-validation-for="UserPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Farmer" class="form-control" />
+                                <label asp-for="Farmer" ></label>
+                                <span asp-validation-for="Farmer" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
