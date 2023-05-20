@@ -1,0 +1,31 @@
+@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h2 class="display-4">Employee Home Page</h2>
+    <p>@Context.Session.GetString("Username")null</p>
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+        <a class="card stretched-link text-decoration-none" style="min-width: 30rem;min-height:20rem ;" asp-area="" asp-controller="Employees" asp-action="UserView">
+            <div class="card-body">
+            <h5 class="card-title">Add New User</h5>
+            <p class="card-text">Add a new user to the system  </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col">
+        <a class="card stretched-link text-decoration-none" style="min-width: 30rem; min-height: 20rem;  " asp-area="" asp-controller="Employees" asp-action="Index">
+            <div class="card-body">
+            <h5 class="card-title-black " >View Products</h5>
+            <p class="card-text">View Products as well as find products from certain farmers
+                and during certain dates  </p>
+            </div>
+        </a>
+    </div>
+    
+</div>

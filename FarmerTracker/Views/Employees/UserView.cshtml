@@ -1,0 +1,125 @@
+@model IEnumerable<FarmerTracker.Models.User>
+
+
+@{
+    ViewData["Title"] = "UserView";
+}
+
+@* <p>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newUser">Add New User</button>
+</p> *@
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New User</a>
+    count:@Context.Session.GetString("Users")
+</p>
+<table class="table">
+    <thead>
+        <tr class="table-secondary">
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Farmer)
+            </th>
+            <th>
+                
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@* 
+@foreach (var item in Model) {
+        <tr class="table-info">
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Farmer)
+            </td> 
+            
+        </tr>
+} *@
+    </tbody>
+</table>
+
+<!-- Modal -->
+@* @model FarmerTracker.Models.User
+<div class="modal fade" id="newUser" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Add New User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="FullName" class="form-control" />
+                                <label asp-for="FullName" ></label>
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Email" class="form-control" />
+                                <label asp-for="Email" ></label>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                <label asp-for="PhoneNumber" ></label>
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="UserPassword" class="form-control" />
+                                <label asp-for="UserPassword" ></label>
+                                <span asp-validation-for="UserPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Farmer" class="form-control" />
+                                <label asp-for="Farmer" ></label>
+                                <span asp-validation-for="Farmer" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+            </div>
+
+        </div>
+    </div>
+</div> *@

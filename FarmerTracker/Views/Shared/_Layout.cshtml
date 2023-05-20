@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
+@model FarmerTracker.Models.User
 <html lang="en">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +33,7 @@
                         @if (Context.Session.GetString("FullName") != null)
                         {
                             <li class="nav-item active">
-                                <a class="nav-link text-light">Hello @Context.Session.GetString("Username")</a>
+                                <a class="nav-link text-light">Hello @Context.Session.GetString("FullName")</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"  asp-area=" " asp-controller="Home" asp-action="Logout">Log Out</a>
@@ -40,8 +42,11 @@
                         }
                         else
                         {
-                            <li class="nav-item ">
+                            @* <li class="nav-item ">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Log In</a>
+                            </li> *@
+                            <li class="nav-item">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Login">Login</button>
                             </li>
                         }
                       </ul>
@@ -54,6 +59,62 @@
             @RenderBody()
         </main>
     </div>
+
+
+ @* https://www.youtube.com/watch?v=tt5uUMQgzl0    *@
+<!-- Modal -->
+<div class="modal fade" id="Login" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                    <form asp-action="Login">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-100 text-danger">
+                            <label class="text-danger">@ViewBag.Notification</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3">
+                            <input asp-for="FullName" class="form-control" placeholder="FullName" />
+                            <label asp-for="FullName"></label>
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-floating mb-3">
+                            <input asp-for="UserPassword" class="form-control" placeholder="UserPassword" />
+                            <label asp-for="UserPassword"></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal" />
+                    </div>            
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal End -->
+
+
+    @* //Todo: change when done with users
+@if (Context.Session.GetString("FullName") != null)
+    {
+        <div class="text-center">
+            <h1 class="display-4">Welcome peopl</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>               
+    } *@
 
     <footer class="border-top footer text-muted">
         <div class="container">
