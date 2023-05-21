@@ -3,41 +3,26 @@
 @{
     ViewData["Title"] = "Index";
 }
- <script type='text/javascript'
-  src='http://code.jquery.com/jquery-1.9.1.js'></script>
-<link rel="stylesheet" type="text/css"
-  href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<script type='text/javascript'
-  src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-
- 
- 
 <br />
-
-
 
 <form asp-controller="Employees" asp-action="Index">
     <div class="input-group">
         <div class="row">
 
             <div class="col-4">
-                
+
                     <input type="search" id="search" name="searchString" class="form-control" placeholder="Search" />
                     <div>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+                        <button class="btn btn-success my-2 my-sm-0" type="submit" >Search</button>
                     </div>
-                
+
             </div>
 
-         
-       
+
+
             <div class="col-7">
-                
+
                 <select class="form-select" id="Ptype" name="Ptype" >
                         <option disabled selected>Select A Product Type to Search for </option>
                         <option value="Fruit">Fruit</option>
@@ -50,83 +35,83 @@
                 </div>
             </div>
 
-            
 
-           
 
-                    <div class="col"  >
-                        Date Range:  
-                        Start:<input type="date" id="start" name="startdate" min="2022-01-01" max="2025-12-31" >
-                        End : <input type="date" id="end" name="enddate" min="2022-01-01" max="2025-12-31">
-                    </div>
-            
-            
+
+
+            <div class="col"  >
+                Date Range:  
+                Start:<input type="date" id="start" name="startdate" min="2022-01-01" max="2025-12-31" >
+                End : <input type="date" id="end" name="enddate" min="2022-01-01" max="2025-12-31">
+            </div>
+
+
         </div>
     </div>
 </form>
 
 
-
 <br />
 
 <div class="container">
-<table class="table ">
-    <thead>
-        <tr class="table-secondary">
-            <th>
-                @Html.DisplayNameFor(model => model.ProductId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ptype)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pdate)
-            </th>
-            <th>
-                Farmer Name
-            </th>
-            @* <th>
-                @Html.DisplayNameFor(model => model.Price)   
-            </th> *@
-        </tr>
-    </thead>
-    
-@if (Model.Count() == 0)
-{   <tbody>
-    <p> No Data Found That Matches Your Search</p>
-    </tbody>
-}
-else
-{
-    <tbody>
-    @foreach (var item in Model) 
-    {
-            <tr class="table-info">
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pname)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Ptype)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pdate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.FullName)
-                </td> 
-                @* <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>  *@
+    <table class="table ">
+        <thead>
+            <tr class="table-success">
+                <th>
+                        @Html.DisplayNameFor(model => model.ProductId)
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Pname)
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Ptype)
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Pdate)
+                </th>
+                <th>
+                    Farmer Name
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Price)   
+                </th>
             </tr>
-    } 
-        </tbody>
-   
-} 
-</table>
+        </thead>
+
+            @if (Model.Count() == 0)
+            {
+                    <tbody>
+                <p> No Data Found That Matches Your Search</p>
+                </tbody>
+            }
+            else
+            {
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                                <tr class="table-light">
+                                    <td>
+                                @Html.DisplayFor(modelItem => item.ProductId)
+                                    </td>
+                                    <td>
+                                @Html.DisplayFor(modelItem => item.Pname)
+                                    </td>
+                                    <td>
+                                @Html.DisplayFor(modelItem => item.Ptype)
+                                    </td>
+                                    <td>
+                                @Html.DisplayFor(modelItem => item.Pdate)
+                                    </td>
+                                    <td>
+                                @Html.DisplayFor(modelItem => item.User.FullName)
+                                    </td> 
+                                    <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                                    </td> 
+                                </tr>
+                    } 
+                    </tbody>
+
+            } 
+    </table>
  </div>

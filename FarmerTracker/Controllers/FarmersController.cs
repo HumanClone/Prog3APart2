@@ -17,6 +17,7 @@ public class FarmersController : Controller
         _context = context;
     }
 
+    // using the userid of the session, the product list is filtered to only show the products of the user
     public IActionResult Profile()
     {
         //HttpContext.Session.SetInt32("UserId",2);
@@ -24,14 +25,17 @@ public class FarmersController : Controller
         return View(products);
     }
 
+
+    //basic return of the view
     public IActionResult Create()
     {
         return View();
     }
 
+    // a post method to create a new product and save it to the database
     [HttpPost]
     [ValidateAntiForgeryToken]
-     public async Task<IActionResult> Create([Bind("Pname,Ptype,Pdate")] Product @product)
+    public async Task<IActionResult> Create([Bind("Pname,Ptype,Pdate")] Product @product)
     {
         @product.UserId=HttpContext.Session.GetInt32("UserId");
         if (ModelState.IsValid)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uwQusJTByMY9Sz1JS8kY1cN4FWozUfYNOHVbSqyeKy4=",
+  "Hash": "hF6jKT5LLUrND/DSXYjypQvDJLochStWr4IcggoSzGM=",
   "Source": "FarmerTracker",
   "BasePath": "_content/FarmerTracker",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\wwwroot\\css\\Solar.css",
+      "SourceId": "FarmerTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\wwwroot\\",
+      "BasePath": "_content/FarmerTracker",
+      "RelativePath": "css/Solar.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Solar.css"
     },
     {
       "Identity": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\wwwroot\\favicon.ico",

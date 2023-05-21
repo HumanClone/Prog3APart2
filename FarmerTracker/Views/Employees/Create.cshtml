@@ -5,13 +5,14 @@
 @{
     ViewData["Title"] = "Create";
 }
-
+@* code to show modal on load *@
 <script>
     $(document).ready(function () {
         $("#newUser").modal('show');
     });
 </script>
 
+@* Modal *@
 <div class="modal fade" id="newUser" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -58,7 +59,7 @@
                         <div class="form-group">
                             <div class="form-floating mb-3">
                                 <select asp-for="Farmer" class="form-control">
-                                    <option disbaled value="">-- Select --</option>
+                                    <option disbaled selected>-- Select --</option>
                                     <option value="No">No</option>
                                     <option value="Yes">Yes</option>
                                 </select>

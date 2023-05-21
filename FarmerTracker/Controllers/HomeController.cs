@@ -30,34 +30,38 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpPost]
-        public async Task<IActionResult> Login(IFormCollection form)
-        {
-            User user = new User();
-            user.FullName = form["FullName"];
-            user.UserPassword = form["UserPassword"];
+  /// How to Secure Passwords with BCrypt.NET
+        /// [
+        ///  var result = BCrypt.Verify("Password123!", passwordHash);;
+        /// ]
+        /// https://code-maze.com/dotnet-secure-passwords-bcrypt/
+        /// Acccessed[20 May 2023]
 
-            var result = _context.Users.Where(u => u.FullName==user.FullName).FirstOrDefault();
-            if (result != null)
+    /* this is a post method that searches the data for the full name and if it exists it will check the password by hasing it and comparing it to the hashed password in the database from there it sets some values to the session and redirects to the profile page
+    */
+
+    [HttpPost]
+    public async Task<IActionResult> Login(IFormCollection form)
+    {
+        User user = new User();
+        user.FullName = form["FullName"];
+        user.UserPassword = form["UserPassword"];
+
+        var result = _context.Users.Where(u => u.FullName==user.FullName).FirstOrDefault();
+        if (result != null)
+        {
+            if (BCrypt.Net.BCrypt.Verify(user.UserPassword, result.UserPassword))
             {
-                if (BCrypt.Net.BCrypt.Verify(user.UserPassword, result.UserPassword))
+                HttpContext.Session.SetInt32("UserId", result.UserId);
+                HttpContext.Session.SetString("FullName", result.FullName);
+                HttpContext.Session.SetString("Farmer", result.Farmer);
+                if (result.Farmer == "Yes")
                 {
-                    HttpContext.Session.SetInt32("UserId", result.UserId);
-                    HttpContext.Session.SetString("FullName", result.FullName);
-                    HttpContext.Session.SetString("Farmer", result.Farmer);
-                    if (result.Farmer == "Yes")
-                    {
-                        return RedirectToAction("Profile", "Farmers");
-                    }
-                    else
-                    {
-                        return RedirectToAction("Home", "Employees");
-                    }
+                    return RedirectToAction("Profile", "Farmers");
                 }
                 else
                 {
-                    ViewBag.Notification = "Password or Username Incorrect";
-                    return View();
+                    return RedirectToAction("Home", "Employees");
                 }
             }
             else
@@ -65,28 +69,25 @@ public class HomeController : Controller
                 ViewBag.Notification = "Password or Username Incorrect";
                 return View();
             }
-           
-            
-        
-            
-
         }
+        else
+        {
+            ViewBag.Notification = "Password or Username Incorrect";
+            return View();
+        }
+    }
 
+
+    /* this is a method that clears the session and redirects to the home page
+    */
     public IActionResult Logout()
     {
         HttpContext.Session.Clear();
         return RedirectToAction("Index", "Home");
     }
 
-    // public IActionResult Profile()
-    // {
-    //     return RedirectToAction("Profile", "Farmers");
-    // }
-    // public IActionResult Home()
-    // {
-    //     return RedirectToAction("Home", "Employees");
-    // }
-
+    /* this is a method that returns the view
+    */
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

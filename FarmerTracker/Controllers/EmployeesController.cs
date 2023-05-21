@@ -18,7 +18,7 @@ public class EmployeesController : Controller
         _context = context;
     }
 
-
+    //using all Possible inputs that may be give to then filter the products and return a list
    public IActionResult Index(string searchString,string? Ptype, DateTime? startdate,DateTime? enddate)
     {   
        
@@ -41,16 +41,29 @@ public class EmployeesController : Controller
         return View(products);
         
     }
+
+    //basic return of the view
     public IActionResult Home()
     {
         return View();
     }
 
+    //basic return of the view
     public IActionResult Create()
     {
         return View();
     }
 
+
+        /// How to Secure Passwords with BCrypt.NET
+        /// [
+        ///  var passwordHash = BCrypt.HashPassword("Password123!");
+        /// ]
+        /// https://code-maze.com/dotnet-secure-passwords-bcrypt/
+        /// Acccessed[20 May 2023]
+
+
+    // a post method to create a new user and save it to the database
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("FullName,Email,PhoneNumber,UserPassword,Farmer")] User @user)
@@ -66,7 +79,7 @@ public class EmployeesController : Controller
         return RedirectToAction(nameof(Create));
     }
 
-
+    // a method to return a list of all the users in the database
     public IActionResult UserView()
     {
         List<User> users= _context.Users.Select(user=>user).ToList<User>();

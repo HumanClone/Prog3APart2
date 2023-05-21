@@ -15,7 +15,7 @@
 
 <table class="table">
     <thead>
-        <tr class="table-secondary">
+        <tr class="table-light">
             <th>
                 @Html.DisplayNameFor(model => model.ProductId)
             </th>
@@ -28,13 +28,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Pdate)
             </th>
-
+             <th>
+                @Html.DisplayNameFor(model => model.Price)   
+            </th>
         </tr>
     </thead>
     <tbody>
 
 @foreach (var item in Model) {
-        <tr class="table-info">
+        <tr class="table-success">
             <td>
                 @Html.DisplayFor(modelItem => item.ProductId)
             </td>
@@ -47,6 +49,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Pdate)
             </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+            </td> 
         </tr>
 } 
     </tbody>

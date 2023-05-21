@@ -4,26 +4,26 @@
 }
 <div class="text-center">
     <h2 class="display-4">Employee Home Page</h2>
-    <p>@Context.Session.GetString("FullName")</p>
+    <h3>@Context.Session.GetString("FullName")</h3>
 </div>
 
-
+@* Card *@
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
-        <a class="card stretched-link text-decoration-none" style="min-width: 30rem;min-height:20rem ;" asp-area="" asp-controller="Employees" asp-action="UserView">
+        <a class="card text-white stretched-link text-decoration-none bg-secondary" style="min-width: 30rem;min-height:20rem ;" asp-area="" asp-controller="Employees" asp-action="UserView">
             <div class="card-body">
-            <h5 class="card-title"></h3>Users</h3>
-            <p class="card-text">Click here to see all users in the system and be able to create new users for the system </p>
+            <h5 class="card-title"><h1>View Users</h1>
+            <h3 class="card-text">See all users in the system and be able to create new users for the system </h3>
             </div>
         </a>
     </div>
 
     <div class="col">
-        <a class="card stretched-link text-decoration-none" style="min-width: 30rem; min-height: 20rem;  " asp-area="" asp-controller="Employees" asp-action="Index">
+        <a class="card text-white stretched-link text-decoration-none bg-secondary" style="min-width: 30rem; min-height: 20rem;  " asp-area="" asp-controller="Employees" asp-action="Index">
             <div class="card-body">
-            <h5 class="card-title-black " >View Products</h5>
-            <p class="card-text">View Products as well as find products from certain farmers
-                and during certain dates  </p>
+            <h1 class="card-title-black">View Products</h1>
+            <h3 class="card-text">View Products as well as find products from certain farmers
+                and during certain dates</h3>
             </div>
         </a>
     </div>

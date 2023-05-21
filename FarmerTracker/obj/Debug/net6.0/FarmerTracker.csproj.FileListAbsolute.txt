@@ -8,6 +8,7 @@ C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTrack
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\FarmerTracker.pdb
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\Humanizer.dll
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -85,4 +86,3 @@ C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTrack
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\obj\Debug\net6.0\FarmerTracker.pdb
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\obj\Debug\net6.0\FarmerTracker.genruntimeconfig.cache
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\obj\Debug\net6.0\ref\FarmerTracker.dll
-C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\BCrypt.Net-Next.dll

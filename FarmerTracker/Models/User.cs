@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Security.Permissions;
 
 #nullable disable
-
+//estblishing the model and using data annotations to validate the data
 namespace FarmerTracker.Models
 {
     public partial class User
@@ -39,6 +39,6 @@ namespace FarmerTracker.Models
         [Required(ErrorMessage = "Please enter password")]
         public string UserPassword { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+    public virtual ICollection<Product> Products { get; } = new List<Product>();
     }
 }

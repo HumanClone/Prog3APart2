@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\FarmerTracker.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\wwwroot\\css\\Solar.css",
+      "PackagePath": "staticwebassets\\css\\Solar.css"
+    },
+    {
       "Id": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

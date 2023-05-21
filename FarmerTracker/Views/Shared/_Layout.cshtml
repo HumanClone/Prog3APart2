@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FarmerTracker.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Solar.css" asp-append-version="true" />
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light bg-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FarmerTracker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        aria-expanded="false" aria-label="Toggle navigation" >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between navbar-light">
                     <ul class="navbar-nav flex-grow-1">
                         @if (Context.Session.GetString("FullName") != null)
                         {
@@ -43,9 +44,7 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                         }
-                        <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                      
                         
                     </ul>
 
@@ -53,18 +52,19 @@
                         @if (Context.Session.GetString("FullName") != null)
                         {
                             <li class="nav-item active">
-                                <a class="nav-link text-dark"> Hello @Context.Session.GetString("FullName")</a>
+                                <a class="nav-link text-dark"> @Context.Session.GetString("FullName")</a>
                             </li>
-                            <br />
+                            <br/>
+                            <br/>
                             <li class="nav-item">
-                                <a class="btn"  asp-area=" " asp-controller="Home" asp-action="Logout">Log Out</a>
+                                <a class="btn btn-secondary"  asp-area=" " asp-controller="Home" asp-action="Logout">Log Out</a>
                             </li> 
                             
                         }
                         else
                         {
                             <li class="nav-item ">
-                                <a class="btn" asp-area="" asp-controller="Home" asp-action="Login">Log In</a>
+                                <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="Login">Log In</a>
                             </li>
                             
                            
@@ -81,11 +81,7 @@
     </div>
 
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - FarmerTracker - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+ 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

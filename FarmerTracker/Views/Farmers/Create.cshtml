@@ -18,7 +18,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modal-title">Add New User</h5>
-                <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" asp-area="" asp-controller="Farmers" asp-action="Profile"></a>
+                <a type="button" class="btn-close" asp-area="" asp-controller="Farmers" asp-action="Profile" aria-label="Close"  data-dismiss="modal"></a>
             </div>
 
             <div class="modal-body">
@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <div class="form-floating mb-3">
                                 <select asp-for="Ptype" class="form-select">
-                                    <option selected>Select Product Type</option>
+                                    <option selected disabled >Select Product Type</option>
                                     <option value="Fruit">Fruit</option>
                                     <option value="Vegetable">Vegetable</option>
                                     <option value="Grain">Grain</option>
@@ -53,6 +53,13 @@
                                 <input asp-for="Pdate" class="form-control" />
                                 <label asp-for="Pdate" ></label>
                                 <span asp-validation-for="Pdate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Price" class="form-control" />
+                                <label asp-for="Price" ></label>
+                                <span asp-validation-for="Price" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="form-group">
