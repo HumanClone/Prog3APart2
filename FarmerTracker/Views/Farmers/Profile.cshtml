@@ -3,12 +3,14 @@
 @{
     ViewData["Title"] = "Profile";
 }
+<h2>Welcome @Context.Session.GetString("FullName")</h2>
+
 
 <p>
     <a asp-action="Create" class="btn btn-primary">Add New Product</a>
 </p>
 
-<h2>Welcome @Context.Session.GetString("FullName")</h2>
+
 
 
 <table class="table">

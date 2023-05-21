@@ -85,3 +85,4 @@ C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTrack
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\obj\Debug\net6.0\FarmerTracker.pdb
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\obj\Debug\net6.0\FarmerTracker.genruntimeconfig.cache
 C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\obj\Debug\net6.0\ref\FarmerTracker.dll
+C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\bin\Debug\net6.0\BCrypt.Net-Next.dll

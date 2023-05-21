@@ -34,13 +34,7 @@
                 
             </div>
 
-            @* Product Types *@
-            @* <div class="col-3">
-                 <input class="form-check-input" id="Ptypech" type="checkbox" name="Ptypech" >
-                    <label class="form-check-label" for="typeRd">
-                    Product Type
-                    </label>
-            </div> *@
+         
        
             <div class="col-7">
                 
@@ -58,20 +52,14 @@
 
             
 
-            @* Date Ranges
-                <div class="col-2">
-                    @* <input class="form-check-input" id="Date" type="checkbox" name="PDate"> 
-                    <label class="form-check-label" for="typeRd">
-                    Date Range
-                    </label>
-                </div> *@
+           
 
                     <div class="col"  >
                         Date Range:  
                         Start:<input type="date" id="start" name="startdate" min="2022-01-01" max="2025-12-31" >
                         End : <input type="date" id="end" name="enddate" min="2022-01-01" max="2025-12-31">
                     </div>
-                @* End *@
+            
             
         </div>
     </div>
@@ -98,12 +86,11 @@
                 @Html.DisplayNameFor(model => model.Pdate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UserId)
+                Farmer Name
             </th>
-            <th>
-                
-            </th>
-            
+            @* <th>
+                @Html.DisplayNameFor(model => model.Price)   
+            </th> *@
         </tr>
     </thead>
     
@@ -133,6 +120,9 @@ else
                 <td>
                     @Html.DisplayFor(modelItem => item.User.FullName)
                 </td> 
+                @* <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>  *@
             </tr>
     } 
         </tbody>

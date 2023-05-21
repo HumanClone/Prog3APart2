@@ -11,16 +11,21 @@ namespace FarmerTracker.Models
     public partial class Product
     {
         [Display(Name = "Product Id")]
+        [Key]
+
         public int ProductId { get; set; }
 
         [Display(Name = "Product Name")]
+        [Required(ErrorMessage = "Please enter product name")]
         public string Pname { get; set; }
         
         [Display(Name = "Product Type")]
+        [Required(ErrorMessage = "Please select product type")]
         public string Ptype { get; set; }
 
         [Display(Name = "Product Date")]
         [DataType(DataType.Date)]
+        [Required(ErrorMessage = "Please enter product date")]
         public DateTime? Pdate { get; set; }
 
         [Display(Name = "Farmer Id")]

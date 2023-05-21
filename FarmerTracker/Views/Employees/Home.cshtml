@@ -4,7 +4,7 @@
 }
 <div class="text-center">
     <h2 class="display-4">Employee Home Page</h2>
-    <p>@Context.Session.GetString("Username")null</p>
+    <p>@Context.Session.GetString("FullName")</p>
 </div>
 
 
@@ -12,8 +12,8 @@
     <div class="col">
         <a class="card stretched-link text-decoration-none" style="min-width: 30rem;min-height:20rem ;" asp-area="" asp-controller="Employees" asp-action="UserView">
             <div class="card-body">
-            <h5 class="card-title">Add New User</h5>
-            <p class="card-text">Add a new user to the system  </p>
+            <h5 class="card-title"></h3>Users</h3>
+            <p class="card-text">Click here to see all users in the system and be able to create new users for the system </p>
             </div>
         </a>
     </div>

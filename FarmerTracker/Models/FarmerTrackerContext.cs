@@ -25,7 +25,14 @@ namespace FarmerTracker.Models
             if (!optionsBuilder.IsConfigured)
             {
 
-                optionsBuilder.UseSqlServer("Data Source=lab000000\\SQLEXPRESS;Initial Catalog=FarmerTracker;Integrated Security=True; Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+                // optionsBuilder.UseSqlServer("Data Source=lab000000\\SQLEXPRESS;Initial Catalog=FarmerTracker;Integrated Security=True; Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+
+                var config = new ConfigurationBuilder().
+                SetBasePath(Directory.GetCurrentDirectory()).
+                AddJsonFile("appsettings.json").
+                Build();
+
+                optionsBuilder.UseSqlServer(config.GetConnectionString("FarmerDatabase"));
             }
         }
 

@@ -6,7 +6,7 @@ namespace FarmerTracker.Controllers;
 
 using Microsoft.EntityFrameworkCore;
 
-#warning need to do popovers and set up log in 
+
 public class EmployeesController : Controller
 {
 
@@ -21,15 +21,13 @@ public class EmployeesController : Controller
 
    public IActionResult Index(string searchString,string? Ptype, DateTime? startdate,DateTime? enddate)
     {   
-        HttpContext.Session.SetInt32("UserId",2);
-        HttpContext.Session.SetString("FullName","Abby");
-
+       
         List<Product> products=_context.Products.Select(product=>product).Include(product=>product.User).ToList<Product>();
 
         if(!string.IsNullOrEmpty(searchString))
         {   
             
-            products=products.Where(product=>product.User.FullName.Equals(searchString)||product.UserId.ToString().Equals(searchString)).ToList<Product>();
+            products=products.Where(product=>product.User.FullName.Equals(searchString)||product.UserId.ToString()==searchString).ToList<Product>();
         }
         if(!string.IsNullOrEmpty(Ptype))
         {
@@ -53,11 +51,24 @@ public class EmployeesController : Controller
         return View();
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create([Bind("FullName,Email,PhoneNumber,UserPassword,Farmer")] User @user)
+    {
+        @user.UserPassword=BCrypt.Net.BCrypt.HashPassword(@user.UserPassword);
+        if (ModelState.IsValid)
+        {
+            _context.Add(user);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(UserView));
+        }
+        
+        return RedirectToAction(nameof(Create));
+    }
+
+
     public IActionResult UserView()
     {
-        HttpContext.Session.SetInt32("UserId",1);
-        HttpContext.Session.SetString("FullName","Pranhav Maistry");
-
         List<User> users= _context.Users.Select(user=>user).ToList<User>();
         return View(users);
     }

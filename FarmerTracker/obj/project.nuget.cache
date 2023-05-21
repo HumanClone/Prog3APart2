@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ty+DqiODHw0zLvgG0k5EiSpi//B83QaTRyp7Z+e1RJ0ZS10pQrtlPRW0LkaJqjpv7o8y1Dxj0xi2rkaE7Zk45Q==",
+  "dgSpecHash": "kUBnfwxRT0UOTT7Ldr+tC9ZFwvwVO63tLhOp038qLfmwcg3gjIO9AYlLNNEvTiHdVxML5dbdIc5XtASFiAts+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\FarmerTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\lab_services_student\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
