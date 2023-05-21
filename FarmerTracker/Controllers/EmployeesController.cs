@@ -19,7 +19,7 @@ public class EmployeesController : Controller
     }
 
 
-   public IActionResult Index(string searchString)
+   public IActionResult Index(string searchString,string? Ptype, DateTime? startdate,DateTime? enddate)
     {   
         HttpContext.Session.SetInt32("UserId",2);
         HttpContext.Session.SetString("FullName","Abby");
@@ -31,7 +31,15 @@ public class EmployeesController : Controller
             
             products=products.Where(product=>product.User.FullName.Equals(searchString)||product.UserId.ToString().Equals(searchString)).ToList<Product>();
         }
-        
+        if(!string.IsNullOrEmpty(Ptype))
+        {
+            products=products.Where(product=>product.Ptype.Equals(Ptype)).ToList<Product>();
+        }
+        if(startdate!=null && enddate!=null)
+        {
+            products=products.Where(product=>product.Pdate>= startdate && product.Pdate<=enddate).ToList<Product>();
+        }
+       
         return View(products);
         
     }
@@ -47,6 +55,9 @@ public class EmployeesController : Controller
 
     public IActionResult UserView()
     {
+        HttpContext.Session.SetInt32("UserId",1);
+        HttpContext.Session.SetString("FullName","Pranhav Maistry");
+
         List<User> users= _context.Users.Select(user=>user).ToList<User>();
         return View(users);
     }

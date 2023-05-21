@@ -58,7 +58,11 @@
 
                         <div class="form-group">
                             <div class="form-floating mb-3">
-                                <input asp-for="Farmer" class="form-control" />
+                                <select asp-for="Farmer" class="form-control">
+                                    <option disbaled value="">-- Select --</option>
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
                                 <label asp-for="Farmer" ></label>
                                 <span asp-validation-for="Farmer" class="text-danger"></span>
                             </div>

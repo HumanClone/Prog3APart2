@@ -3,21 +3,23 @@
 @{
     ViewData["Title"] = "Index";
 }
-@* <script type='text/javascript'
+ <script type='text/javascript'
   src='http://code.jquery.com/jquery-1.9.1.js'></script>
 <link rel="stylesheet" type="text/css"
   href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <script type='text/javascript'
   src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<script type='text/javascript'>
-$(window).load(function()
-{
-    $('#search').popover();
-});
-</script> *@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+ 
  
 <br />
+
+
 
 <form asp-controller="Employees" asp-action="Index">
     <div class="input-group">
@@ -32,17 +34,18 @@ $(window).load(function()
                 
             </div>
 
-            <div class="col-3">
-                    <input class="form-check-input" id="typeRd" type="checkbox" name="Ptype">
+            @* Product Types *@
+            @* <div class="col-3">
+                 <input class="form-check-input" id="Ptypech" type="checkbox" name="Ptypech" >
                     <label class="form-check-label" for="typeRd">
                     Product Type
                     </label>
-            </div>
-
-
-            <div class="col-4">
-                <select class="form-select" id="Ptype" disabled="disabled">
-                        <option selected>Product Type </option>
+            </div> *@
+       
+            <div class="col-7">
+                
+                <select class="form-select" id="Ptype" name="Ptype" >
+                        <option disabled selected>Select A Product Type to Search for </option>
                         <option value="Fruit">Fruit</option>
                         <option value="Vegetable">Vegetable</option>
                         <option value="Grain">Grain</option>
@@ -54,24 +57,21 @@ $(window).load(function()
             </div>
 
             
+
+            @* Date Ranges
                 <div class="col-2">
-                    <input class="form-check-input" id="typeRd" type="checkbox" name="PDate">
+                    @* <input class="form-check-input" id="Date" type="checkbox" name="PDate"> 
                     <label class="form-check-label" for="typeRd">
                     Date Range
                     </label>
-                </div>
+                </div> *@
 
                     <div class="col"  >
-                       
-                       Start:<input type="date" id="start" name="trip-start" min="2022-01-01" max="2025-12-31" >
+                        Date Range:  
+                        Start:<input type="date" id="start" name="startdate" min="2022-01-01" max="2025-12-31" >
+                        End : <input type="date" id="end" name="enddate" min="2022-01-01" max="2025-12-31">
                     </div>
-                    
-
-                    <div class="col">
-                        
-                     End : <input type="date" id="start" name="trip-start" min="2022-01-01" max="2025-12-31" >
-                    </div>
-                
+                @* End *@
             
         </div>
     </div>
@@ -107,9 +107,10 @@ $(window).load(function()
         </tr>
     </thead>
     
-@if (Model==null)
-{
-    <p> No Data Found</p>
+@if (Model.Count() == 0)
+{   <tbody>
+    <p> No Data Found That Matches Your Search</p>
+    </tbody>
 }
 else
 {
