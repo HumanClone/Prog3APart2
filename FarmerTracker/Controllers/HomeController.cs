@@ -44,10 +44,10 @@ public class HomeController : Controller
     public async Task<IActionResult> Login(IFormCollection form)
     {
         User user = new User();
-        user.FullName = form["FullName"];
+        user.Email = form["Email"];
         user.UserPassword = form["UserPassword"];
 
-        var result = _context.Users.Where(u => u.FullName==user.FullName).FirstOrDefault();
+        var result = _context.Users.Where(u => u.Email==user.Email).FirstOrDefault();
         if (result != null)
         {
             if (BCrypt.Net.BCrypt.Verify(user.UserPassword, result.UserPassword))

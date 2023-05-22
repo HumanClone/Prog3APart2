@@ -35,7 +35,7 @@ public class FarmersController : Controller
     // a post method to create a new product and save it to the database
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Pname,Ptype,Pdate")] Product @product)
+    public async Task<IActionResult> Create([Bind("Pname,Ptype,Pdate,Price")] Product @product)
     {
         @product.UserId=HttpContext.Session.GetInt32("UserId");
         if (ModelState.IsValid)

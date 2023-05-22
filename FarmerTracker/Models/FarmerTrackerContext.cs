@@ -19,7 +19,7 @@ public partial class FarmerTrackerContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    //connection to the database using the json file so that it is not hard coded
+   //connection to the database using the json file so that it is not hard coded
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
@@ -34,11 +34,12 @@ public partial class FarmerTrackerContext : DbContext
     }
 
     //creating the tables in the database
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6CDAF477383");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6CD77FAF1FF");
 
             entity.Property(e => e.Pdate).HasColumnType("datetime");
             entity.Property(e => e.Pname)
@@ -51,12 +52,12 @@ public partial class FarmerTrackerContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.Products)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Products__UserId__76969D2E");
+                .HasConstraintName("FK__Products__UserId__17F790F9");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C7D44A20C");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C5AC115C3");
 
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
