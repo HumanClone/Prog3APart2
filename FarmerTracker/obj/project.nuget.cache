@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NeqV1AQD18Mb1CR5Y17K48EL26lZthXCjHLDxZhVToiFwNI6Ft4YUVR/aTugV2XyFzHnZivFcy/xhny03bjG/A==",
+  "dgSpecHash": "kUBnfwxRT0UOTT7Ldr+tC9ZFwvwVO63tLhOp038qLfmwcg3gjIO9AYlLNNEvTiHdVxML5dbdIc5XtASFiAts+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\farmertracker\\FarmerTracker.csproj",
+  "projectFilePath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\FarmerTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

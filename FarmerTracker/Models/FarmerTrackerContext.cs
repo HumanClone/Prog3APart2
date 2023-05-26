@@ -20,7 +20,6 @@ public partial class FarmerTrackerContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-
         => optionsBuilder.UseSqlServer("Server=tcp:st10083716.database.windows.net,1433;Initial Catalog=FarmerTracker;Persist Security Info=False;User ID=st10083716;Password=Tonyvast40;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
