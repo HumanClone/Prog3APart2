@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FarmerTracker
 build_property.RootNamespace = FarmerTracker
-build_property.ProjectDir = C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker\
+build_property.ProjectDir = C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\farmertracker\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\FarmerTracker
+build_property.MSBuildProjectDirectory = C:\Users\lab_services_student\Documents\Vs Code Projects\Prog3APart2\farmertracker
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Employees/Create.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Employees/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Employees/Home.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Employees/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEhvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Employees/Index.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Employees/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Employees/UserView.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Employees/UserView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXFVzZXJWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Farmers/Create.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Farmers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWVyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Farmers/Profile.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Farmers/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFybWVyc1xQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Home/Index.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Home/Login.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Shared/Error.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/_ViewImports.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/_ViewStart.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/FarmerTracker/Views/Shared/_Layout.cshtml]
+[C:/Users/lab_services_student/Documents/Vs Code Projects/Prog3APart2/farmertracker/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6oxkxfg43g

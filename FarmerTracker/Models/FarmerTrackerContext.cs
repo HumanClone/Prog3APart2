@@ -19,27 +19,15 @@ public partial class FarmerTrackerContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-   //connection to the database using the json file so that it is not hard coded
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            var config = new ConfigurationBuilder().
-            SetBasePath(Directory.GetCurrentDirectory()).
-            AddJsonFile("appsettings.json").
-            Build();
 
-            optionsBuilder.UseSqlServer(config.GetConnectionString("FarmerDatabase"));
-        }
-    }
-
-    //creating the tables in the database
+        => optionsBuilder.UseSqlServer("Server=tcp:st10083716.database.windows.net,1433;Initial Catalog=FarmerTracker;Persist Security Info=False;User ID=st10083716;Password=Tonyvast40;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6CD77FAF1FF");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6CDB14BF6C5");
 
             entity.Property(e => e.Pdate).HasColumnType("datetime");
             entity.Property(e => e.Pname)
@@ -52,12 +40,12 @@ public partial class FarmerTrackerContext : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.Products)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Products__UserId__17F790F9");
+                .HasConstraintName("FK__Products__UserId__5EBF139D");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C5AC115C3");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C51B8B2D4");
 
             entity.Property(e => e.Email)
                 .HasMaxLength(100)

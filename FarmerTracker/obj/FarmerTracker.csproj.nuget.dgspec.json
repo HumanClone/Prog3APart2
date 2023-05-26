@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\FarmerTracker.csproj": {}
+    "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\farmertracker\\FarmerTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\FarmerTracker.csproj": {
+    "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\farmertracker\\FarmerTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\FarmerTracker.csproj",
+        "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\farmertracker\\FarmerTracker.csproj",
         "projectName": "FarmerTracker",
-        "projectPath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\FarmerTracker.csproj",
+        "projectPath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\farmertracker\\FarmerTracker.csproj",
         "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\FarmerTracker\\obj\\",
+        "outputPath": "C:\\Users\\lab_services_student\\Documents\\Vs Code Projects\\Prog3APart2\\farmertracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lab_services_student\\AppData\\Roaming\\NuGet\\NuGet.Config",
