@@ -1,46 +1,55 @@
 # *Farmer Tracker*
 
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/cd3cb56b-cc42-436c-b270-e17827ca5f81)
+
+![Home](https://github.com/HumanClone/Prog3APart2/assets/74468682/5f51bf04-5996-4edc-9eec-58f46a8c09a7)
 
 This Website allows Employees to add farmers to the database as well as view products withthe ability to search and filter the list based on various criteria
 
 
 ## Login
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/dcc49ba6-971c-4a69-ab35-994c74794330)
+
+![Login 1](https://github.com/HumanClone/Prog3APart2/assets/74468682/423fb4f6-47e6-4ed0-bbcf-e173e079b65d)
+
 the user click the login and must enter the credentials
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/ca59a092-3b05-4c18-8ac2-0e82795fd2d8)
+
+![Login 2](https://github.com/HumanClone/Prog3APart2/assets/74468682/96156df5-74b4-4fa3-ac02-2f6fbf748f63)
+
 
 ## Employee
 
 ### if the user is an employee they will be directed to the employee home page in which they can choose what to do 
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/e2e4ab86-cde1-4fb6-8b93-9c4418de6de7)
+![Employee](https://github.com/HumanClone/Prog3APart2/assets/74468682/19558361-7129-48c6-b614-01f9bbe826b6)
 
 ### View Users 
 Here the employee can view all the users in the system except thier passwords for security reasons, they are able to add new farmers as well
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/7af61f8f-1b54-4bdd-9d85-1648c4b50c49)
+![View User](https://github.com/HumanClone/Prog3APart2/assets/74468682/00e9bc9c-e74f-48b7-b466-6495689f7d7b)
+
 #### Add User
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/270f676b-315b-492d-8236-ea9912456612)\
+![New User](https://github.com/HumanClone/Prog3APart2/assets/74468682/7ed2f22f-9fb4-46de-94e8-4c7ca1f9d300)
+
 the user will assign a password to the farmer which will then be encrypted and stored in the database
 
 ### View Products
 Here the employee will be able to see al products in the system and search and filter as they deem 
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/fa961b82-72b4-4521-a84d-5aea1f1ee7fe)
+![View product](https://github.com/HumanClone/Prog3APart2/assets/74468682/2a94660b-74f2-4660-95aa-c15a5cb91618)
+
 #### filtered by product type eg dairy
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/06d58c8a-2e16-46c9-b9c1-6993b1717dce)
+![Filter 1](https://github.com/HumanClone/Prog3APart2/assets/74468682/e29ed578-6219-4337-88f6-dd33d48d4ed3)
 #### Filtered by famrer: Alex Johnson or 1 as it works with either name or user id
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/6ceca645-6a00-45e2-9285-0b9608827363)
+![FIlter 2](https://github.com/HumanClone/Prog3APart2/assets/74468682/6417d272-77aa-4419-9149-d030d15a6903)
 #### Filtered By date May 2023
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/c653cab3-7e61-430b-b3e1-6ca0190012bf)
+![Filter 3](https://github.com/HumanClone/Prog3APart2/assets/74468682/83124465-906e-4931-bbfa-ce4b76336382)
 #### Combonation of all : Jen Brown ,Grain in August
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/43752107-6106-4de2-8d70-acb071908b83)
+![Filter 4](https://github.com/HumanClone/Prog3APart2/assets/74468682/def3541e-640f-45db-b9f5-e3627e89ef91)
 this is the end of the employees use cases 
 
 ## Farmer
 ### Profile
 Here the farmer will be able to see all the product they have under their profile as well as add to it 
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/c796a2f5-7476-46dd-9e53-1cbc407175ff)
+![Profile](https://github.com/HumanClone/Prog3APart2/assets/74468682/593e97c3-efa4-4f99-8dc1-71be1fa49f47)
+
 ### Adding a Product
-![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/aab1c66a-db3f-473c-80d4-fecc23da4b4f)
+![Add PRoduct](https://github.com/HumanClone/Prog3APart2/assets/74468682/1f16b443-3907-41aa-b82a-fbe2753db209)
 That is the end case of the farmers
 
 ## How to Compile
