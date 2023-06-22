@@ -63,6 +63,10 @@ from there you will be given a local host port <br>
 use  that port to access the  web application <br>
 When it comes to connecting to a datbase, change the connection string in the application json settings to the string of the database
 
+A test account is
+johndoe123@example.com
+dp4NQ2HCb-n7BmY
+
 ## Requirement
 EntityFrameworkCore V5<br>
 .Net V6<br>
