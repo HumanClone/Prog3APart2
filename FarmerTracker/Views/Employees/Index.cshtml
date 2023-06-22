@@ -10,9 +10,12 @@
     <div class="input-group">
         <div class="row">
 
-            <div class="col-4">
+            <div class="col-5">
 
-                    <input type="search" id="search" name="searchString" class="form-control" placeholder="Search" />
+                    <select type="search" id="search" name="searchString" class="form-select" placeholder="Search" asp-items="@ViewBag.items">
+                        <option disabled selected>Select a Farmer </option>
+                    </select>
+                    
                     <div>
                         <button class="btn btn-success my-2 my-sm-0" type="submit" >Search</button>
                     </div>
@@ -106,7 +109,7 @@
                                 @Html.DisplayFor(modelItem => item.User.FullName)
                                     </td> 
                                     <td>
-                                @Html.DisplayFor(modelItem => item.Price)
+                                R @Html.DisplayFor(modelItem => item.Price)
                                     </td> 
                                 </tr>
                     } 

@@ -55,14 +55,17 @@ That is the end case of the farmers
 ## How to Compile
 **Connection string for the database is in the application JSon**
 
-Open the folder in Vs code 
-RUn buid tasks
-in the Termnal run: dotnet run
+Open the folder in Vs code<br> 
+RUn buid tasks<br>
+in the Termnal run: dotnet run<br>
+from there you will be given a local host port <br>
+use  that port to access the  web application <br>
+When it comes to connecting to a datbase, change the connection string in the application json settings to the string of the database
 
 ## Requirement
-EntityFrameworkCore V5
-.Net V6
-asp.Core .Net
+EntityFrameworkCore V5<br>
+.Net V6<br>
+asp.Core .Net<br>
 
 
 

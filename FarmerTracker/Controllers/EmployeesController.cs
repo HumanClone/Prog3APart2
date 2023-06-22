@@ -4,6 +4,7 @@ using FarmerTracker.Models;
 using System.Linq;
 namespace FarmerTracker.Controllers;
 
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -16,12 +17,14 @@ public class EmployeesController : Controller
     public EmployeesController(FarmerTrackerContext context)
     {
         _context = context;
+        
     }
 
     //using all Possible inputs that may be give to then filter the products and return a list
-   public IActionResult Index(string searchString,string? Ptype, DateTime? startdate,DateTime? enddate)
+    public IActionResult Index(string searchString,string? Ptype, DateTime? startdate,DateTime? enddate)
     {   
-       
+        var farmers= _context.Users.Where(x=>x.Farmer.Equals("yes")).Select(x=>x.FullName);
+        ViewBag.items =new SelectList(farmers);
         List<Product> products=_context.Products.Select(product=>product).Include(product=>product.User).ToList<Product>();
 
         if(!string.IsNullOrEmpty(searchString))
@@ -44,7 +47,7 @@ public class EmployeesController : Controller
 
     //basic return of the view
     public IActionResult Home()
-    {
+    {   
         return View();
     }
 
