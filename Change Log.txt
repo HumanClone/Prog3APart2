@@ -1,0 +1,5 @@
+1. Updated read me with how to get app running 
+2. Added Image for Visual 
+3. Added drop down for farmers
+4. Updated db 
+5. Added R to price
