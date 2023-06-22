@@ -1,7 +1,8 @@
 # *Farmer Tracker*
 
 
-![Home](https://github.com/HumanClone/Prog3APart2/assets/74468682/5f51bf04-5996-4edc-9eec-58f46a8c09a7)
+![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/06a4242e-5e8a-4864-9fd8-fd73bd3caa8a)
+
 
 This Website allows Employees to add farmers to the database as well as view products withthe ability to search and filter the list based on various criteria
 
@@ -22,7 +23,7 @@ the user click the login and must enter the credentials
 
 ### View Users 
 Here the employee can view all the users in the system except thier passwords for security reasons, they are able to add new farmers as well
-![View User](https://github.com/HumanClone/Prog3APart2/assets/74468682/00e9bc9c-e74f-48b7-b466-6495689f7d7b)
+![image](https://github.com/HumanClone/Prog3APart2/assets/74468682/8d137a3a-40d6-47c8-91ad-812c43ffd0a3)
 
 #### Add User
 ![New User](https://github.com/HumanClone/Prog3APart2/assets/74468682/7ed2f22f-9fb4-46de-94e8-4c7ca1f9d300)
@@ -30,12 +31,12 @@ Here the employee can view all the users in the system except thier passwords fo
 the user will assign a password to the farmer which will then be encrypted and stored in the database
 
 ### View Products
-Here the employee will be able to see al products in the system and search and filter as they deem 
+Here the employee will be able to see all products in the system and search and filter as they deem 
 ![View product](https://github.com/HumanClone/Prog3APart2/assets/74468682/2a94660b-74f2-4660-95aa-c15a5cb91618)
 
 #### filtered by product type eg dairy
 ![Filter 1](https://github.com/HumanClone/Prog3APart2/assets/74468682/e29ed578-6219-4337-88f6-dd33d48d4ed3)
-#### Filtered by famrer: Alex Johnson or 1 as it works with either name or user id
+#### Filtered by famrer: Alex Johnson  as it works with either name or user id
 ![FIlter 2](https://github.com/HumanClone/Prog3APart2/assets/74468682/6417d272-77aa-4419-9149-d030d15a6903)
 #### Filtered By date May 2023
 ![Filter 3](https://github.com/HumanClone/Prog3APart2/assets/74468682/83124465-906e-4931-bbfa-ce4b76336382)
@@ -54,7 +55,7 @@ That is the end case of the farmers
 
 ## How to Compile
 **Connection string for the database is in the application JSon**
-
+Download Zip <br>
 Open the folder in Vs code<br> 
 RUn buid tasks<br>
 in the Termnal run: dotnet run<br>
